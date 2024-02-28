@@ -1,0 +1,23 @@
+import math
+
+def quadratic_formula(a, b, c):
+    # Calculate the discriminant
+    discriminant = b**2 - 4 * a * c
+    
+    # Check if there are real solutions
+    if discriminant >= 0:
+        # Calculate the two solutions
+        x1 = (-b + math.sqrt(discriminant)) / (2 * a)
+        x2 = (-b - math.sqrt(discriminant)) / (2 * a)
+        return x1, x2
+    else:
+        # No real solutions
+        return None
+
+# Example usage
+a = 1
+b = -3
+c = 2
+solutions = quadratic_formula(a, b, c)
+print(f"The solutions for {a}x^2 + {b}x + {c} = 0 are: {solutions}")
+
