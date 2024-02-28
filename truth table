@@ -11,4 +11,5 @@ truth_table['P → Q'] = truth_table.apply(lambda row: not row['P'] or row['Q'],
 truth_table['Q → P'] = truth_table.apply(lambda row: not row['Q'] or row['P'], axis=1)
 truth_table['P ↔ Q'] = truth_table.apply(lambda row: row['P'] == row['Q'], axis=1)
 
-truth_table
+print(truth_table.to_string())
+
