@@ -1,7 +1,8 @@
+#引入pandas函式庫
 import pandas as pd
-
+#設定truth_values為列表,其列表為真值表的四種組合
 truth_values = [(False, False), (False, True), (True, False), (True, True)]
-
+#使用pandas函式庫中的DataFrame函數,然後再從truth_value取值放入P跟Q中 
 truth_table = pd.DataFrame(truth_values, columns=['P', 'Q'])
 truth_table['P ∧ Q'] = truth_table.apply(lambda row: row['P'] and row['Q'], axis=1)
 truth_table['P ∨ Q'] = truth_table.apply(lambda row: row['P'] or row['Q'], axis=1)
