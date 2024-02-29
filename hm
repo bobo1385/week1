@@ -1,22 +1,25 @@
 import math
+#定義一個函數式
 def quadratic_formula(a, b, c):
     discriminant = b**2 - 4 * a * c
-    
     if discriminant >= 0:
-        # Calculate the two solutions
+#判別式大於等於0
         x1 = (-b + math.sqrt(discriminant)) / (2 * a)
         x2 = (-b - math.sqrt(discriminant)) / (2 * a)
+
         return x1, x2
+    
     else:
+#判別式小於0
         return None
 
-
+#輸入自變數
 a = float(input("輸入a值: "))
-b = float(input("輸入b值:: "))
+b = float(input("輸入b值: "))
 c = float(input("輸入c值: "))
 
 solutions = quadratic_formula(a, b, c)
 if solutions:
-    print(f"方程式x^2 + {b}x + {c} = 0 的解為: {solutions}")
+    print(f"方程式{a}x^2 + {b}x + {c} = 0 的解為: {solutions}")
 else:
     print("無實數解")
